@@ -1,1 +1,13 @@
-<router-outlet></router-outlet>
+<div class="container">
+  <div class="routes">
+    <perfect-scrollbar>
+      <div *ngFor="let i of navigation">
+        <a routerLink="{{ i.link }}" title="{{ i.title }}">
+          <div>{{ i.route }}</div>
+        </a>
+      </div>
+    </perfect-scrollbar>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>
